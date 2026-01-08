@@ -25,7 +25,7 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #3B82F6;
+  --theme: #a75f2e;
   --theme2: #EC4899;
   --theme3: #05A4BF;
   --theme4: #F72;
@@ -104,7 +104,7 @@ h6 {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 44px;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: -2px;
@@ -3958,7 +3958,7 @@ span {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 58px 0;
 }
 @media (max-width: 1199px) {
   .section-padding {
@@ -4041,7 +4041,7 @@ span {
   color: rgba(255, 255, 255, 0.75);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.5;
   margin-top: 25px;
 }
 @media (max-width: 1199px) {
