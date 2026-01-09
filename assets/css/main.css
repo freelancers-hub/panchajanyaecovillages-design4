@@ -2841,7 +2841,7 @@ span {
 }
 @media (max-width: 1399px) {
   .footer-area {
-    margin: 0 15px;
+    margin: 0 0px;
     padding-left: 14px !important;
     padding-right: 14px !important;
   }
@@ -11402,7 +11402,7 @@ span {
 }
 @media (max-width: 1399px) {
   .cta-newsletter-section {
-    margin: 0 15px;
+    margin: 0 0px;
     padding-left: 14px !important;
     padding-right: 14px !important;
   }
