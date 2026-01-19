@@ -75,6 +75,33 @@
         $(".sidebar-sticky-item").fadeIn().addClass("active");
     });
 
+
+
+     /* ================================
+       hero slider
+    ================================ */
+
+    const heroSwiper = new Swiper(".hero-slider", {
+    loop: true,
+    speed: 1200,
+    effect: "slide",   // ✅ IMPORTANT
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+});
+
+
+
+
     
       /* ================================
        Sticky Header Js Start
