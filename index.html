@@ -73,6 +73,14 @@
     --hero-content-offset: 120px;
 }
 
+.hero-section.hero-1 {
+    scroll-snap-align: start;
+}
+
+body {
+    scroll-snap-type: y mandatory;
+}
+
 /* =============================
    HEADER
 ============================= */
@@ -90,11 +98,10 @@
 ============================= */
 .hero-section.hero-1 {
     position: relative;
-    height: 85vh;
-    min-height: 600px;
+    height: 100vh;           /* FULL SCREEN */
+    min-height: 100svh;      /* mobile-safe viewport */
     padding-top: var(--nav-height);
     overflow: hidden;
-    background: none !important;
 }
 
 /* =============================
@@ -181,7 +188,7 @@
     }
 
     .hero-slider .container {
-        padding-top: 0;
+        padding-top: 160px; /* adjust if needed */
         padding-bottom: 70px;   /* space from bottom */
         padding-left: 16px;
         padding-right: 16px;
@@ -206,6 +213,36 @@
     }
 }
 
+/* Default: hero header (transparent) */
+#header-sticky .main-menu ul li a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Sticky header (after scroll) */
+#header-sticky.sticky .main-menu ul li a {
+    color: rgb(167, 95, 46);
+}
+
+/* Optional: hover */
+#header-sticky .main-menu ul li a:hover {
+    color: #f2c28b;
+}
+
+
+#header-sticky {
+    transition: transform 0.35s ease, background-color 0.3s ease;
+    will-change: transform;
+}
+
+#header-sticky.header-hidden {
+    transform: translateY(-100%);
+}
+
+#header-sticky.sticky {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
     </style>
 </head>
@@ -357,7 +394,7 @@
 
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <div class="hero-bg" style="background-image:url('assets/img/home-1/hero/banner2.jpeg')"></div>
+                <div class="hero-bg" style="background-image:url('assets/img/home-1/hero/banner9.jpg')"></div>
                 <div class="hero-overlay"></div>
 
                 <div class="container">
@@ -735,7 +772,7 @@
 
 
                 <!-- Marquee Section Start -->
-<div class="marquee-section2">
+<!-- <div class="marquee-section2">
     <div class="marquee style-2 mb-0">
         <div class="marquee-group">
             <div class="text">
@@ -828,7 +865,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 

@@ -32,6 +32,48 @@
         }
     });
 
+    $(document).on("mousemove", function (e) {
+    if (e.clientY < 80) {
+        header.removeClass("header-hidden");
+    }
+});
+
+
+/* ================================
+   Header Hide / Show + Color Switch
+================================ */
+
+let lastScrollTop = 0;
+const header = $("#header-sticky");
+const delta = 8;
+const headerHeight = header.outerHeight();
+
+$windowOn.on("scroll", function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    /* ===== Sticky state ===== */
+    if (scrollTop > 80) {
+        header.addClass("sticky");
+    } else {
+        header.removeClass("sticky header-hidden");
+    }
+
+    /* ===== Ignore tiny scrolls ===== */
+    if (Math.abs(scrollTop - lastScrollTop) <= delta) return;
+
+    /* ===== Scroll down → hide ===== */
+    if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+        header.addClass("header-hidden");
+    } 
+    /* ===== Scroll up → show ===== */
+    else {
+        header.removeClass("header-hidden");
+    }
+
+    lastScrollTop = scrollTop;
+});
+
+
     /* ================================
         Sidebar Toggle & Sticky Item Logic
         ================================ */
@@ -107,13 +149,13 @@
        Sticky Header Js Start
     ================================ */
 
-       $windowOn.on("scroll", function () {
-        if ($(this).scrollTop() > 250) {
-          $("#header-sticky").addClass("sticky");
-        } else {
-          $("#header-sticky").removeClass("sticky");
-        }
-      });      
+    //    $windowOn.on("scroll", function () {
+    //     if ($(this).scrollTop() > 250) {
+    //       $("#header-sticky").addClass("sticky");
+    //     } else {
+    //       $("#header-sticky").removeClass("sticky");
+    //     }
+    //   });      
       
        /* ================================
        Video & Image Popup Js Start

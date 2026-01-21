@@ -38,7 +38,7 @@ Version: 1.0.0
   --text: #3D4857;
   --border: #FCFCFC;
   --bg: #F2F5F7;
-  --bg2: #0F172A;
+  --bg2: #1F1F1F;
   --bg3: #F7F2F5;
   --bg4: #E6F8FB;
   --bg5: #FBF9EF;
@@ -1856,7 +1856,7 @@ span {
   padding: 14px 0;
 }
 .header-1 .mean__menu-wrapper .main-menu ul li a {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(167 95 46);
 }
 .header-1 .mean__menu-wrapper .main-menu ul li a i {
   margin-left: 4px;
@@ -2446,7 +2446,7 @@ span {
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 }
 .sticky.header-1 {
-  background-color: var(--header);
+  background-color: var(--body);
   padding: 0px 0;
   box-shadow: rgba(0, 0, 0, 0.9) 0px 8px 24px;
 }
