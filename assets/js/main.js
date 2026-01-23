@@ -120,15 +120,18 @@ $windowOn.on("scroll", function () {
 
 
      /* ================================
-       hero slider
-    ================================ */
+   HERO SLIDER – PREMIUM EFFECT
+================================ */
 
-    const heroSwiper = new Swiper(".hero-slider", {
+const heroSwiper = new Swiper(".hero-slider", {
     loop: true,
-    speed: 1200,
-    effect: "slide",   // ✅ IMPORTANT
+    speed: 1400,
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true
+    },
     autoplay: {
-        delay: 5000,
+        delay: 5500,
         disableOnInteraction: false
     },
     pagination: {
@@ -138,9 +141,51 @@ $windowOn.on("scroll", function () {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
+    },
+    on: {
+        init: function () {
+            animateHeroContent(this.slides[this.activeIndex]);
+        },
+        // slideChangeTransitionStart: function () {
+        //     $(".hero-content").css("opacity", 0);
+        // },
+        slideChangeTransitionEnd: function () {
+            animateHeroContent(this.slides[this.activeIndex]);
+        }
     }
 });
 
+
+
+function animateHeroContent(slide) {
+    const content = $(slide).find(".hero-content");
+
+    if (!content.length) return;
+
+    gsap.fromTo(
+        content.find("h6"),
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }
+    );
+
+    gsap.fromTo(
+        content.find("h1"),
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, delay: 0.15, ease: "power3.out" }
+    );
+
+    gsap.fromTo(
+        content.find("p"),
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, delay: 0.35, ease: "power2.out" }
+    );
+
+    gsap.fromTo(
+        content.find(".theme-btn"),
+        { y: 20, opacity: 0, scale: 0.95 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.6, delay: 0.55, ease: "back.out(1.6)" }
+    );
+}
 
 
 

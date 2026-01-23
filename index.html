@@ -244,6 +244,207 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+/* =============================
+   MOBILE HERO – FINAL POLISH
+============================= */
+@media (max-width: 576px) {
+
+    /* Push content to bottom but not too low */
+    .hero-slider .swiper-slide {
+        align-items: flex-end;
+    }
+
+    .hero-slider .container {
+        padding-top: 120px;
+        padding-bottom: 90px;
+    }
+
+    /* Content card refinement */
+    .hero-content {
+        max-width: 92%;
+        padding: 18px 18px 20px;
+        border-radius: 14px;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    /* Sub heading */
+    .hero-content h6 {
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        opacity: 0.85;
+    }
+
+    /* Main heading */
+    .hero-content h1 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    /* Paragraph */
+    .hero-content p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+    }
+
+    /* Button */
+    .hero-content .theme-btn {
+        padding: 10px 18px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+
+    /* Hide arrows on mobile */
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+}
+/* =============================
+   HERO BACKGROUND ANIMATION
+============================= */
+.hero-bg {
+    transform: scale(1);
+    transition: transform 6s ease;
+}
+
+.swiper-slide-active .hero-bg {
+    transform: scale(1.08);
+}
+.swiper-pagination-bullet {
+    background: rgba(255,255,255,0.6);
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #a75f2e;
+    transform: scale(1.3);
+}
+
+/* ================================
+   CTA CONTACT SECTION
+================================ */
+.cta-contact-section {
+    background: linear-gradient(
+        rgba(0, 70, 180, 0.85),
+        rgba(0, 70, 180, 0.85)
+    ),
+    url("assets/img/home-1/cta-newsletter.jpg") center/cover no-repeat;
+    padding: 25px 0;
+    border-radius: 24px;
+    margin: 10px 0px;
+}
+
+.cta-contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Content */
+.cta-left h2 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.cta-left p {
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+    max-width: 480px;
+}
+
+/* Right Form Card */
+.cta-right {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.cta-form .form-group {
+    margin-bottom: 15px;
+}
+
+.cta-form input,
+.cta-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 30px;
+    border: 1px solid #e2e2e2;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.cta-form textarea {
+    border-radius: 16px;
+    resize: none;
+}
+
+.cta-form input:focus,
+.cta-form textarea:focus {
+    border-color: #a75f2e;
+    box-shadow: 0 0 0 2px rgba(167,95,46,0.15);
+}
+
+/* Button */
+.cta-btn {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    background: #a75f2e;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-btn i {
+    margin-left: 8px;
+}
+
+.cta-btn:hover {
+    background: #8c4e24;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+    .cta-contact-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .cta-left p {
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta-contact-section {
+        padding: 60px 0;
+        margin: 60px 12px;
+    }
+
+    .cta-left h2 {
+        font-size: 28px;
+    }
+
+    .cta-right {
+        padding: 25px;
+    }
+}
+
     </style>
 </head>
         
@@ -427,16 +628,16 @@ body {
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero-content">
-                                <h6>TRUSTED & LEGALLY APPROVED</h6>
+                                <h6>REAL ESTATE DEVELOPERS SINCE 2009</h6>
                                 <h1>
-                                    Invest Smart in High-Growth<br>
-                                    Locations Around Hyderabad
+                                    Premium Open Plots & Villa Plots<br>
+                                    in Hyderabad’s Future Growth Zones
                                 </h1>
                                 <p>
-                                    Secure plots near Future City & Srisailam Highway with clear documentation.
+                                    Invest with confidence in legally approved, strategically located open plots by Paanchajanya Realty.
                                 </p>
                                 <a href="#" class="theme-btn">
-                                    <span>View Projects</span>
+                                    <span>Explore Projects</span>
                                 </a>
                             </div>
                         </div>
@@ -453,16 +654,16 @@ body {
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero-content">
-                                <h6>25+ YEARS OF EXPERIENCE</h6>
+                                <h6>REAL ESTATE DEVELOPERS SINCE 2009</h6>
                                 <h1>
-                                    Building Communities<br>
-                                    That Grow With You
+                                    Premium Open Plots & Villa Plots<br>
+                                    in Hyderabad’s Future Growth Zones
                                 </h1>
                                 <p>
-                                    Thousands of happy customers and consistently growing land value.
+                                    Invest with confidence in legally approved, strategically located open plots by Paanchajanya Realty.
                                 </p>
                                 <a href="#" class="theme-btn">
-                                    <span>Contact Us</span>
+                                    <span>Explore Projects</span>
                                 </a>
                             </div>
                         </div>
@@ -572,7 +773,7 @@ body {
         <div class="row align-items-center">
             <div class="col-xl-5">
                 <div class="about-image fix">
-                    <img src="https://panchajanyaecovillages.com/assets/imgs/images/Rajender.png" alt="img">
+                    <img src="assets/img/home-1/about/about.jpg" alt="img">
                 </div>
             </div>
             <div class="col-xl-7 mt-4 mt-xl-0">
@@ -599,7 +800,7 @@ body {
                             </div>
                         </div>
                     </a>
-                    <div class="about-conter-items">
+                    <!-- <div class="about-conter-items">
                         <div class="counter-box wow fadeInUp" data-wow-delay=".3s">
                             <h6>Years of Experience</h6>
                             <h2><span class="count">25</span>+</h2>
@@ -615,7 +816,7 @@ body {
                             </p>
                         </div>
                         
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -961,27 +1162,48 @@ body {
 </section>
 
 
-               <!-- Cta Newsletter Section Start -->
-<section class="cta-newsletter-section bg-cover" style="background-image: url('assets/img/home-1/cta-newsletter.jpg');">
+               <!-- CTA Contact Section Start -->
+<section class="cta-contact-section">
     <div class="container">
-        <div class="cta-newsletter-wrapper">
-            <h2 >
-                Own a Piece of <br> Hyderabad’s Future.
-            </h2>
-            <div class="newsletter-form wow fadeInUp" data-wow-delay=".3s">
+        <div class="cta-contact-wrapper">
+            
+            <!-- Left Content -->
+            <div class="cta-left">
+                <h2>
+                    Own a Piece of <br>
+                    Hyderabad’s Future.
+                </h2>
                 <p>
-                    Get project updates, site visit details, and investment insights directly to your inbox.
+                    Get project updates, site visit details, and investment insights directly from our team.
                 </p>
-                <form action="#">
-                    <input type="text" placeholder="Enter your email address">
-                    <button class="email-btn" type="submit">
-                        <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <!-- Right Form -->
+            <div class="cta-right">
+                <form class="cta-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Message (Optional)"></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn">
+                        Send Enquiry <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </form>
             </div>
+
         </div>
     </div>
 </section>
+<!-- CTA Contact Section End -->
+
 
                 
                 <!--<< Footer Start >>-->

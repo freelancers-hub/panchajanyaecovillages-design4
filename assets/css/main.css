@@ -4999,8 +4999,10 @@ span {
   }
 }
 .about-wrapper .about-image img {
+  margin-top: 7px;
+    margin-bottom: 7px;
   width: 520px;
-  height: 600px;
+  /* height: 600px; */
   border-radius: 16px;
 }
 @media (max-width: 1199px) {
