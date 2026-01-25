@@ -3938,7 +3938,7 @@ span {
 }
 
 .section-bg-2 {
-  background-color: var(--bg2);
+  background-color: #F5F5DC;
 }
 
 .section-bg-3 {
@@ -7511,13 +7511,13 @@ span {
   }
 }
 .project-box-items .content span {
-  color: var(--white);
+  color: #290F1C;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -1px;
 }
 .project-box-items .content h3 {
-  color: var(--white);
+  color: #290F1C;
   font-size: 48px;
   font-weight: 500;
   letter-spacing: -3px;
@@ -7535,7 +7535,7 @@ span {
   }
 }
 .project-box-items .content h3 a {
-  color: var(--white);
+  color: #290F1C;
   background-position: 0 95%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
